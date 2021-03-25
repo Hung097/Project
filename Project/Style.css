@@ -1,0 +1,196 @@
+body{
+    margin: 0px;
+    background-color: honeydew;
+    font-family: "微軟正黑體";
+}
+.hide{
+    display: none
+}
+.effect{
+    animation: blink 2s infinite;
+}
+@keyframes blink{
+    0%{opacity: 1;}
+    25%{opacity: 0.75;}
+    50%{opacity: 0.5;}
+    75%{opacity: 0.75;}
+    100%{opacity: 1;}
+}
+.all>.number{
+    width: 550px;
+    position: fixed;
+    top:400px;
+    left: 50%;
+    transform: translate(-275px, 0);
+    border:saddlebrown solid 1px;
+    padding: 30px;
+    text-shadow: saddlebrown 1px 1px 1px;
+    background-color: gainsboro;
+    font-size: 35px;
+    font-weight: bold;
+    display: none;
+}
+.all>.number>.close{
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top:5px;
+    right: 15px;
+    cursor: pointer;
+}
+.all>.view{
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: slateblue 1px 1px 1px;
+}
+.all>nav>.title{
+    font-family: fantasy;
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(29, 3, 3);
+    text-shadow: rgb(37, 5, 21) 2px 2px 2px;
+    padding: 10px;
+    text-align: center;
+}
+.all>nav>.title>a>.home{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.all>nav>.title>a>.hometag{
+    position: absolute;
+    top:5px;
+    right:300px;
+    width: 30px;
+    height: 30px;
+}
+.all>nav>.title>a>.homeRight{
+    font-size: 20px;
+    position: absolute;
+    color: darkorchid;
+    top: 5px;
+    right: 250px;
+}
+.all>nav>.title>a>.product{
+    font-size: 20px;
+    position: absolute;
+    color: darkorchid;
+    top: 5px;
+    right: 120px;
+}
+.all>nav>.title>a>.hometag2{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 210px;
+}
+.all>nav>.title>.dialog>.callMe{
+    cursor: pointer;
+    font-size: 20px;
+    color: darkorchid;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+.all>nav>.title>.dialog>.hometag3{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 80px;
+}
+.all>nav>.title>a{
+    text-decoration: none;
+}
+.all>.view>.view1{
+    display:block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height:700px;
+}
+.all>main>article>.item_title{
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: slateblue 1px 1px 1px;
+    padding: 10px;
+}
+
+.all>main>article>.item{
+    font-size: 20px;
+    margin: 0px;
+}
+.all>main>article>.item>li{
+    padding:10px;
+}
+.all>main>article>.item>li>.item1{
+    color: green;
+    font-weight: bold;
+    text-shadow:greenyellow 2px 2px 5px;
+}
+.all>main>article>.item_bottom{
+    font-size: 35px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    padding-top:50px;
+}
+#check1:hover{
+    color:red;
+}
+#check1_2:hover{
+    color: red;
+}
+#check2:hover{
+    color:green;
+}
+#check3:hover{
+    color:blue;
+}
+.all>.up{
+    width:100px;
+    height:100px;
+    position:fixed;
+    right:10px;
+    bottom:110px;
+}
+footer{
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: black 1px 1px 1px;
+    background-color:seagreen;
+    width: 100%;
+    text-align: center;
+    bottom: 0%;
+    margin: 0px;
+}
+footer>img{
+    width: 35px;
+    height: 30px;
+    margin-left: 10px;
+    cursor:pointer;
+}
+footer>.copy{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: red;
+}
+.all>main{
+    background-color:gainsboro;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.all>main>.box{
+    background-color:greenyellow;
+    width: 500px;
+    height:400px;
+    flex: none;
+    margin:20px;
+    text-align: center;
+    font-size: 30px;
+}
