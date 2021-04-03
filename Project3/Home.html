@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切版練習</title>
+    <script src="https://use.fontawesome.com/1325e7e83b.js"></script>
+    <style type="text/css">
+        *{
+           margin: 0;
+           padding: 0;
+           list-style: none; 
+           font-family: 'Noto Sans TC', sans-serif;
+        }
+        .container{
+            width: 1200px; 
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .header .container{
+            align-items: center;
+            padding: 20px;
+        }
+        .banner .container{
+            height: 100%;
+        }
+        .second-group{
+            background-color: #ccc;
+        }
+
+        .header{
+            background:#000;
+        }
+        .header .logo{
+            width: 100px;
+        }
+        .header .logo img{
+            width: 100%;
+            vertical-align: middle;
+        }
+        .header .main-nav{
+            margin: auto;
+            
+        }
+        .header .main-nav a{
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 1em;
+            position: relative;
+            transform: translateY(0px);
+            transition: .3s;
+            display: inline-block;
+        }
+
+        .header .main-nav a:hover{
+            transform: translateY(-5px);
+        }
+        .header .main-nav a:after{
+            content: '';
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: -5px;
+            height: 0;
+            border-bottom: 1px solid #fff;
+            transition: .3s;
+        }
+        .header .main-nav a:hover:after{
+            left: 0;
+            right: 0;
+        }        
+        .header .header-search{
+            display: flex;
+        }
+        .header .header-search input:focus{
+            outline: none;
+
+        }
+        .header .header-search input{
+            border: none;
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 30px 0 0 30px;
+        }
+        .header .header-search button{
+            border-radius: 0 30px 30px 0;
+
+        }
+        .header .header-search button .fa{
+            text-align: center;
+            line-height: 30px;
+            width: 30px;
+            height: 30px;
+        }
+        .header .header-search button:focus{
+            outline: none;
+        }
+
+        
+
+
+
+        .banner{
+            width: 100%;
+            max-width: 1440;
+            height: 700px;
+            background-color: #ccc;
+            background: linear-gradient(115deg, #7bf 50%,
+                 transparent 50%) center center / 100% 100%,
+                 url("https://picsum.photos/1920/1080/?random=16"), 
+                 right center / auto 100%;
+        }
+        .banner-txt{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .banner-txt h1{
+            padding-bottom: .3em;
+            margin-bottom: .3em;
+            font-size: 80px;
+            border-bottom: 1px solid #333;
+            font-weight: 900;
+        }
+        .banner-txt h1 small{
+            display: block;
+            font-size: 53px;
+            font-weight: 700;
+        }
+        .banner-txt h2{
+            font-size: 50px;
+            font-weight: 700;
+        }
+        .banner-txt p{
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+
+
+
+        .main-title{
+            margin: 50px 50px;
+            text-align: center;
+        }
+        .second-title h2{
+            font-size: 30px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+        .main-title  h1{
+            width: 100%;
+            font-size: 80px;
+            font-weight: bold;
+            box-sizing: border-box;
+            color: #a00;
+            text-align: center;
+            display: flex;
+        }
+        .main-title h1::before,
+        .main-title h1::after{
+            content: '';
+            display: block;
+            height: 1px;
+            flex-grow: 1;
+            background-color: #a00;
+            margin: auto;
+        }
+        .main-title h1::before{
+            margin-right: 0.5em;
+        }
+        .main-title h1::after{
+            margin-left: 0.5em;
+        }
+        .main-title .txt{
+            width: 600px;
+            padding-top: 50px;
+            margin: auto;
+            box-sizing: border-box;
+        }
+        .main-title .txt p{
+            font-weight: 100;
+            line-height: 1.3;
+            font-size: 15px;
+            padding:0px 50px 15px;
+            color: black;
+        }
+        .main-title .txt p:first-child::first-letter{
+            font-size: 50px;
+            float: left;
+            padding-right: 10px;
+        }
+
+
+
+
+        .fish{
+            display: flex;
+            width: 1200px;
+            margin: 50px auto;
+            padding-top: 75px;
+        }
+        .fish .item{
+            width: 370px;
+            margin: 0 15px;
+            text-align: center;
+            border: 10px solid #f9cec2;
+            background-color: #fff;
+            border-radius: 20px;
+        }
+        .fish .item h3{
+            color: #f5afac;
+        }
+        .fish .item p{
+            color: #ccc;
+        }
+        .fish .item .icon{
+            width: 150px;height: 150px;
+            background-color: #fff;
+            margin: -75px auto 0px;
+            font-size: 85px;
+            line-height: 150px;
+            border-radius: 50%;
+            color:#f5afac;
+            position: relative;
+        }
+        .fish .item .txt{
+            padding: 20px 20px 2em;
+        }
+        .fish .item .icon:before{
+            content: '';
+            width: 100%;height: 100%;
+            position: absolute;
+            border-top:10px solid #f9cec2;
+            border-left:10px solid #f9cec2;
+            border-bottom:10px solid transparent;
+            border-right:10px solid transparent;
+            left: -10px;
+            top: -10px;
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+        .fish .item:hover .fa{
+            animation: ss .2s linear infinite alternate;
+        }
+        @keyframes ss{
+            0%{
+                transform: rotate(-10deg);
+            }
+            100%{
+                transform: rotate(10deg);
+            }
+        }
+
+
+
+        .student-msg{
+            display: flex;
+            align-items: center;
+            padding-bottom: 100px;
+        }
+        .student-msg .item{
+            width: 368px;
+            margin: 0 15px;
+            display: flex;
+            background-color: white;
+            border: 1px solid #888;
+            box-shadow: 0 0px 5px rgba(0, 0, 0, .5);
+        }
+        .student-msg .item .pic{
+            width: 50%;
+        }
+        .student-msg .item .pic img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .student-msg .item .txt{
+            width: 50%;
+            padding: 20px;
+            margin: 20px 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .student-msg .item .txt h2{
+            margin-bottom: 1em;
+        }
+        .student-msg .item .txt .btn{
+            line-height: 1.5em;
+            border: 1px solid #ccc;
+            padding: 0 1em;
+            align-self: flex-end;
+            text-decoration: none;
+            border-radius: 200px;
+            margin-top: auto;
+            color: #aaa;
+        }
+        .student-msg .item .txt .btn:hover{
+            background-color: #ccc;
+            color: #fff;
+        }
+
+
+
+        .card{
+            width: 1200px;
+            display: flex;
+            margin: auto;
+        }
+        .card .item{
+            width: 368px;
+            margin: 15px;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            transform: translateY(0px);
+            transition: .5s;
+        }
+        .card .item img{
+            width: 100%;
+            vertical-align: middle;
+        }
+        .card .item h2{
+            border-bottom: 1px solid #888;
+            padding-bottom: .3em;
+            margin-bottom: .3em;
+            font-weight: 900;
+            transition: .25s;
+        }
+        .card .item p{
+            line-height: 1.6;
+            font-weight: 300;
+            transition: .25s;
+        }
+        .card .item .txt{
+            padding: 20px;
+            position: relative;
+        }
+        .card .item .txt:before{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 0;
+            top: 0;
+            border-top: 50px solid transparent;
+            border-left: 184px solid #fff;
+            border-right: 184px solid #fff;
+            transform: translateY(-100%);
+        }
+        .card .item:hover{
+            transform: translateY(-50px);
+        }
+        .card .item:hover .txt{
+            background-image: linear-gradient(0deg, #fb8076, #feb85d);
+        }
+        .card .item:hover .txt:before{
+            border-left: 184px solid #feb85d;
+            border-right: 184px solid #feb85d;
+        }
+        .card .item:hover h2{
+            color: #fff;
+            border-bottom: 1px solid #fff;
+        }
+        .card .item:hover p{
+            color: #fff;
+        }
+
+
+
+        .main-footer{
+            padding: 150px 0 0 0;
+            background:linear-gradient(-20deg,#3f5494,#08c7a5)
+        }
+
+        .main-footer .footer-item{
+            width: 0;
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+
+        .main-footer .footer-item h4{
+            font-size: 24px;
+            color: #fff;
+            border-bottom: 1px dotted #fff;
+            margin-bottom: .5em;
+            padding-bottom: .5em;
+        }
+
+        .main-footer .footer-item nav{
+            display: flex;
+            flex-direction: column;
+        }
+        .main-footer .footer-item nav a{
+            color: #fff;
+            line-height: 1.4;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        .main-footer .footer-subs{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-footer .footer-subs form{
+            display: flex;
+            width: 100%;
+            margin: auto 0px;
+        }
+
+        .main-footer .footer-subs input[type="text"]{
+            width: 0;
+            flex-grow: 1;
+        }
+        .main-footer .footer-subs input[type="submit"]{
+            color: #70f6df;
+            background-color: #3e5293;
+            border: none;
+            padding: 5px 10px;
+        }
+        
+        .main-footer .copyright{
+            text-align: center;
+            width: 100%;
+            margin-top: 150px;
+            padding: 10px;
+            background-color: #3e5293;
+            color: #70f6df;
+        }
+        .main-footer .footer-item nav a:hover{
+            color: #fa0;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="https://picsum.photos/300/200/?random=1">
+            </a>
+            <nav class="main-nav">
+                <a href="#">Title1</a>
+                <a href="#">Title2</a>
+                <a href="#">Title3</a>
+                <a href="#">Title4</a>
+            </nav>
+            <form class="header-search">
+                <input type="search" name="" id="">
+                <button><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="banner">
+        <div class="container">
+            <div class="banner-txt">
+                <h1>
+                    TITLE
+                    <small>
+                        Lorem, ipsum dolor.
+                    </small>
+                </h1>
+                <h2>SECOND TITLE</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur 
+                    <br>
+                    adipisicing elit. Officiis, perferendis.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="main-title">
+        <div class="container">
+            <h1>CSS COKE IS AWESOME</h1>
+            <div class="txt">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, praesentium. Eos ratione praesentium iste quidem, ipsum eius porro ullam velit blanditiis aspernatur. Provident veritatis voluptas praesentium commodi quidem et facilis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, suscipit harum a quae amet, ullam molestiae animi, rem voluptate perspiciatis reprehenderit aut saepe modi cum dicta in non atque enim.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="fish">
+        <div class="item">
+            <div class="icon">
+                <i class="fa fa-gavel"></i>
+            </div>
+            <div class="txt">
+                <h3>Title</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda a ut sit voluptate quae necessitatibus repellat dolore voluptas aut ullam est tenetur quam facere cum vel voluptatibus laudantium soluta laboriosam cupiditate ex, tempore deserunt? Autem!</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="icon">
+                <i class="fa fa-thumbs-up"></i>
+            </div>
+            <div class="txt">
+                <h3>Title</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda a ut sit voluptate quae necessitatibus repellat dolore voluptas aut ullam est tenetur quam facere cum vel voluptatibus laudantium soluta laboriosam cupiditate ex, tempore deserunt? Autem!</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="icon">
+                <i class="fa fa-bell"></i>
+            </div>
+            <div class="txt">
+                <h3>Title</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda a ut sit voluptate quae necessitatibus repellat dolore voluptas aut ullam est tenetur quam facere cum vel voluptatibus laudantium soluta laboriosam cupiditate ex, tempore deserunt? Autem!</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="main-title second-title">
+        <div class="container">
+            <h2>CSS COKE IS AWESOME</h2>
+        </div>
+    </div>
+
+
+
+    <div class="student-msg">
+        <div class="container">
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400/?random=1">
+                </div>
+                <div class="txt">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quidem doloribus doloremque suscipit deserunt iusto quod cupiditate esse, rem quasi!</p>
+                    <a href="#" class="btn">more</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400/?random=2">
+                </div>
+                <div class="txt">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quidem doloribus doloremque suscipit deserunt iusto quod cupiditate esse, rem quasi!</p>
+                    <a href="#" class="btn">more</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400/?random=3">
+                </div>
+                <div class="txt">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quidem doloribus doloremque suscipit deserunt iusto quod cupiditate esse, rem quasi!</p>
+                    <a href="#" class="btn">more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="second-group">
+        <div class="main-title">
+            <div class="container">
+                <h1>CSS COKE IS AWESOME</h1>
+                <div class="txt">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, praesentium. Eos ratione praesentium iste quidem, ipsum eius porro ullam velit blanditiis aspernatur. Provident veritatis voluptas praesentium commodi quidem et facilis?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, suscipit harum a quae amet, ullam molestiae animi, rem voluptate perspiciatis reprehenderit aut saepe modi cum dicta in non atque enim.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="item">
+                <img src="https://picsum.photos/300/300/?random=1">
+                <div class="txt">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit placeat vitae blanditiis quo, ipsa ipsum quibusdam corporis! Ea culpa ad nisi. Sapiente placeat dolorum in expedita veniam beatae. Vitae quaerat quos cupiditate eligendi distinctio illum ratione iusto et culpa, porro odio quae facilis veritatis repudiandae officia. Obcaecati odit expedita natus.</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/300/300/?random=2">
+                <div class="txt">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit placeat vitae blanditiis quo, ipsa ipsum quibusdam corporis! Ea culpa ad nisi. Sapiente placeat dolorum in expedita veniam beatae. Vitae quaerat quos cupiditate eligendi distinctio illum ratione iusto et culpa, porro odio quae facilis veritatis repudiandae officia. Obcaecati odit expedita natus.</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://picsum.photos/300/300/?random=3">
+                <div class="txt">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit placeat vitae blanditiis quo, ipsa ipsum quibusdam corporis! Ea culpa ad nisi. Sapiente placeat dolorum in expedita veniam beatae. Vitae quaerat quos cupiditate eligendi distinctio illum ratione iusto et culpa, porro odio quae facilis veritatis repudiandae officia. Obcaecati odit expedita natus.</p>
+                </div>
+            </div>
+        </div>
+    
+
+
+        <div class="main-title second-title second-title">
+            <div class="container">
+                <h2>CSS COKE IS AWESOME</h2>
+            </div>
+        </div>
+    
+
+
+        <div class="student-msg">
+            <div class="container">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/200/200/?random=4">
+                    </div>
+                    <div class="txt">
+                        <h2>Title</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, magni voluptatibus! Cum est fugit, dicta suscipit deserunt optio numquam rerum, omnis doloribus soluta, nemo minima.</p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/200/200/?random=5">
+                    </div>
+                    <div class="txt">
+                        <h2>Title</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, magni voluptatibus! Cum est fugit, dicta suscipit deserunt optio numquam rerum, omnis doloribus soluta, nemo minima.</p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/200/200/?random=6">
+                    </div>
+                    <div class="txt">
+                        <h2>Title</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, magni voluptatibus! Cum est fugit, dicta suscipit deserunt optio numquam rerum, omnis doloribus soluta, nemo minima.</p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-footer">
+        <div class="container">
+            <div class="footer-item">
+                <h4>關於課程</h4>
+                <nav>
+                    <a href="#">課程目標</a>
+                    <a href="#">辦學理念</a>
+                    <a href="#">課程宗旨</a>
+                </nav>
+            </div>
+            <div class="footer-item">
+                <h4>課程列表</h4>
+                <nav>
+                    <a href="#">暴力網頁入門班</a>
+                    <a href="#">RWD網頁深入理解</a>
+                    <a href="#">CSS3互動動畫設計</a>
+                    <a href="#">Bootstrap框加實務</a>
+                </nav>
+            </div>
+            <div class="footer-item">
+                <h4>服務項目</h4>
+                <nav>
+                    <a href="#">網站建置顧問</a>
+                    <a href="#">網站設計建置</a>
+                    <a href="#">網站規劃</a>
+                    <a href="#">企業教育訓練</a>
+                </nav>
+            </div>
+            <div class="footer-item footer-subs">
+                <h4>訂閱電子報</h4>
+                <form>
+                    <input type="text" name="">
+                    <input type="submit" value="訂閱">
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2021 hung
+        </div>
+    </div>
+
+
+</body>
+</html>
