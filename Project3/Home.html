@@ -14,16 +14,17 @@
            font-family: 'Noto Sans TC', sans-serif;
         }
         .container{
-            width: 1200px; 
+            width: 100%; max-width: 1200px; 
             margin: auto;
             display: flex;
             flex-wrap: wrap;
         }
         .header .container{
+            width: 100%;
             align-items: center;
-            padding: 20px;
         }
         .banner .container{
+            
             height: 100%;
         }
         .second-group{
@@ -34,6 +35,7 @@
             background:#000;
         }
         .header .logo{
+            padding: 20px 10px;
             width: 100px;
         }
         .header .logo img{
@@ -42,12 +44,11 @@
         }
         .header .main-nav{
             margin: auto;
-            
         }
         .header .main-nav a{
             text-decoration: none;
             color: #fff;
-            padding: 5px 1em;
+            padding: 5px 10px;
             position: relative;
             transform: translateY(0px);
             transition: .3s;
@@ -73,15 +74,17 @@
         }        
         .header .header-search{
             display: flex;
+            justify-content: flex-end;
+            display: none;
         }
         .header .header-search input:focus{
             outline: none;
 
         }
         .header .header-search input{
+
             border: none;
             background-color: #fff;
-            padding: 5px 10px;
             border-radius: 30px 0 0 30px;
         }
         .header .header-search button{
@@ -98,19 +101,18 @@
             outline: none;
         }
 
-        
-
 
 
         .banner{
             width: 100%;
             max-width: 1440;
-            height: 700px;
+            height: 100vh;
             background-color: #ccc;
             background: linear-gradient(115deg, #7bf 50%,
                  transparent 50%) center center / 100% 100%,
                  url("https://picsum.photos/1920/1080/?random=16"), 
                  right center / auto 100%;
+            box-sizing: border-box;
         }
         .banner-txt{
             height: 100%;
@@ -144,8 +146,10 @@
 
 
         .main-title{
-            margin: 50px 50px;
+            width: 100%; max-width: 1200px;
+            margin: auto;
             text-align: center;
+            padding-top: 50px;
         }
         .second-title h2{
             font-size: 30px;
@@ -155,7 +159,7 @@
         }
         .main-title  h1{
             width: 100%;
-            font-size: 80px;
+            font-size: 50px;
             font-weight: bold;
             box-sizing: border-box;
             color: #a00;
@@ -193,25 +197,29 @@
         .main-title .txt p:first-child::first-letter{
             font-size: 50px;
             float: left;
-            padding-right: 10px;
+            padding-right:15px;
         }
 
 
 
 
         .fish{
+            width: 100%; max-width: 1200px; 
             display: flex;
-            width: 1200px;
-            margin: 50px auto;
+            margin: auto;
             padding-top: 75px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            box-sizing: border-box;
         }
         .fish .item{
             width: 370px;
-            margin: 0 15px;
+            margin-top: 90px;
             text-align: center;
             border: 10px solid #f9cec2;
             background-color: #fff;
             border-radius: 20px;
+            box-sizing: border-box;
         }
         .fish .item h3{
             color: #f5afac;
@@ -257,16 +265,21 @@
             }
         }
 
-
-
         .student-msg{
+            width: 100%; max-width: 1200px; 
             display: flex;
-            align-items: center;
+            justify-content: center;
             padding-bottom: 100px;
+            margin: auto;
+        }
+        .student-msg .container{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
         .student-msg .item{
-            width: 368px;
-            margin: 0 15px;
+            width: 100%;
+            margin-top: 50px;
             display: flex;
             background-color: white;
             border: 1px solid #888;
@@ -307,16 +320,16 @@
             color: #fff;
         }
 
-
-
         .card{
-            width: 1200px;
+            width: 100%; max-width: 1200px; 
             display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             margin: auto;
         }
         .card .item{
             width: 368px;
-            margin: 15px;
+            margin: 50px 0;
             text-align: center;
             background-color: #fff;
             border: 1px solid #ccc;
@@ -373,15 +386,20 @@
             color: #fff;
         }
 
-
-
         .main-footer{
+            width: 100%; 
+            margin: auto;
             padding: 150px 0 0 0;
-            background:linear-gradient(-20deg,#3f5494,#08c7a5)
+            background:linear-gradient(-20deg,#3f5494,#08c7a5);
+            
+        }
+        .main-footer .container{
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .main-footer .footer-item{
-            width: 0;
+            width: 100%;
             flex-grow: 1;
             margin: 0 20px;
         }
@@ -426,19 +444,34 @@
             border: none;
             padding: 5px 10px;
         }
-        
         .main-footer .copyright{
             text-align: center;
             width: 100%;
             margin-top: 150px;
-            padding: 10px;
             background-color: #3e5293;
             color: #70f6df;
+            padding: 10px 0;
         }
         .main-footer .footer-item nav a:hover{
             color: #fa0;
         }
-
+        @media screen and (min-width:768px){
+            .header .main-nav{
+                width: 75%;
+                display: flex;
+                justify-content: space-around;
+            }
+            .fish .item{
+                margin-top: 50px;
+            }
+            .student-msg .item{
+                width: 30%;
+            }
+            .main-footer .container .footer-item{
+                width: 20%;
+            }
+           
+        }
         
     </style>
 </head>
