@@ -1,0 +1,160 @@
+*{  
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.save{
+    width: 100%; max-width: 1400px;
+    margin: auto; margin-bottom: 60px;
+}
+.save .save-container{
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+.save .pic{
+    width: 100%; height: 250px;
+    border-radius: 10px 10px 0 0;
+    border-top: 5px solid rgba(222, 222, 200, 0.7);
+    border-right: 5px solid rgba(222, 222, 200, 0.7);
+    border-left: 5px solid rgba(222, 222, 200, 0.7);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.save .pic img{
+    width: 100%; height: 100%;
+}
+.save .txt{
+    width: 100%; height: 250px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute; top: 0; left: 0;
+    display: flex; flex-direction: column; justify-content: space-around; align-items: center;
+    border-radius: 10px 10px 0 0;
+    backdrop-filter: blur(3px);
+    transform: scale(0) rotate(-180deg);
+    transition: .5s;
+}
+.save .txt h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: hotpink;
+}
+.save .txt p{
+    font-size: 18px;
+    font-weight: 300;
+}
+.save .txt p::before{
+    content: '';
+    width: 7em;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    transform: translateX(-3.5em);
+    text-align: center;
+}
+
+.save .btn{
+    background-color: whitesmoke;
+    width: 100%; height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    border-top: 5px dotted rgba(222, 222, 200, 0.7);
+    border-left: 5px solid rgba(222, 222, 200, 0.7);
+    border-right: 5px solid rgba(222, 222, 200, 0.7);
+    border-bottom: 5px solid rgba(222, 222, 200, 0.7);
+    box-sizing: border-box;
+    box-shadow: 0 10px 10px -10px rgba(0 ,0 ,0 );
+    
+}
+.save .btn a{
+    background-color: gray;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    transform: translateX(15px);
+    transition: .3s;
+    box-shadow: -3px 3px 2px black;
+}
+.save .btn a:hover{
+    opacity: 0.5;
+    transform: scale(0.95);
+    box-shadow: none;
+}
+.save .btn .fa{
+    font-size: 30px;
+    transform: translateX(30px);
+}
+
+.save .save-container:hover .txt{
+    transform: scale(1) rotate(0deg);
+}
+.save .save-container:hover .fa{
+    animation: move .3s infinite alternate;
+}
+@keyframes move {
+    0%{
+        transform: translateX(30px);
+    }
+    100%{
+        transform: translateX(18px);
+    }
+}
+
+@media screen and (min-width:768px) {
+    .save .save-container{
+        display: flex; flex-wrap: wrap;
+    }
+    .save .pic{
+        width: 50%; height: 300px;
+        border-radius: 10px 0 0 0;
+        border-right: none;
+    }
+    .save .txt{
+        transform: scale(1);
+        width: 50%; height: 300px;
+        position: relative;
+        background-color: whitesmoke;
+        border-radius: 0 10px 0 0;
+        border-top: 5px solid rgba(222, 222, 200, 0.7);
+        border-right: 5px solid rgba(222, 222, 200, 0.7);
+        border-left: 5px dotted rgba(222, 222, 200, 0.7);
+        box-sizing: border-box;
+        transition: none;
+    }
+    .save .face-container .txt{
+        order: -1;
+        border-left: 5px solid rgba(222, 222, 200, 0.7);
+        border-right: 5px dotted rgba(222, 222, 200, 0.7);
+        border-radius: 10px 0 0 0;
+    }
+    .save .face-container .pic{
+        border-radius: 0 10px 0 0;
+        border-right: 5px solid rgba(222, 222, 200, 0.7);
+        border-left: none;
+    }
+
+    .save .txt h1{
+        font-size: 50px;
+        font-weight: 500;
+    }
+    .save .txt p{
+        font-size: 30px;
+        font-weight: 300;
+    }
+    .save .txt p::before{
+        width: 9em;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-4.5em);
+    }
+    .save .btn{
+        width: 100%;
+        height: 100px;
+    }
+}

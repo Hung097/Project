@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.login{
+    width: 100%; max-width: 1400px; height: 800px;
+    margin: 0 auto 80px;
+    position: relative;
+}
+.login .back{
+    width: 100%; height: 100%;
+    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGs4wtVgfi7bel6mYcnWOLM206nOTabbQifA&usqp=CAU")
+                no-repeat center center / cover;
+    position: absolute;
+}
+.login .login-container{
+    width: 100%; height: 100%;
+    margin: auto;
+    display: flex; justify-content: center; align-items: center;
+}
+.login form{
+    width: 300px; height: 350px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    background-color: rgba(255, 125, 255, .3);
+    border-radius: 30px; border: 2px solid whitesmoke;
+    box-shadow: 0 0 30px whitesmoke;
+    backdrop-filter: blur(5px);
+    position: relative;
+}
+.login form h3{
+    font-size: 30px;font-weight: bold;
+    margin-bottom: 20px; padding-bottom: 10px;
+    color: whitesmoke;
+    border-bottom:1px solid whitesmoke;
+}
+
+.login form .group{
+    margin-bottom: 10px;
+}
+.login form .group label{
+    line-height: 2em;
+    color: whitesmoke;
+    font-size: 18px;
+}
+.login form .group input{
+    width: 100%;
+    line-height: 2.5;
+    border-radius: 10px;
+    border: none;
+}
+.login form .group input:focus,
+.login form .group-btn input:focus{
+    outline: none;
+}
+
+.login form .group-btn{
+    margin-top: 10px;
+}
+.login form .group-btn input{
+    width: 100px; height: 35px;
+    border: none;
+    background-color: rgb(92, 4, 92);
+    border-radius: 10px;
+    font-size: 15px;
+    color: whitesmoke;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    transition: .3s;
+}
+.login form .group-btn input + input{
+    margin-left: 10px;
+}
+.login form .group-btn input:hover{
+    transform: scale(.9);
+    opacity: 0.8;
+}
+
+.login form .group-help{
+    position: absolute;
+    right: 20px;
+    bottom: 2px;
+}
+.login form .group-help a{
+    text-decoration: none;
+    
+}
+@media screen and (min-width:768px) {
+    .login{
+        margin: 0 auto;
+    }
+}

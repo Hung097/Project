@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+footer{
+    width: 100%;
+    margin: auto;
+    background: linear-gradient(0deg,whitesmoke,grey,whitesmoke);
+}
+.footer-container{
+    width: 80%;
+    margin: auto;
+}
+.footer-container .item{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.footer-container .item .mail{
+    width: 60px; height: 60px;
+    position:relative;
+    border-radius: 10px 0 0 10px;
+    background-color: white;
+}
+.footer-container .item .mail::before{
+    content: '訂閱';
+    position: absolute;
+    width: 50px;
+    transform: translate(0px,-30px);
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer-container .item .mail img{
+    height: 100%; width: 100%;
+}
+.footer-container .item input:focus{
+    outline:none;
+}
+.footer-container .item input[type="email"]{
+    border: none;
+    font-size: 20px;
+    width: 150px;
+    height: 60px;
+}
+.footer-container .item input[type="submit"]{
+    width: 60px; height: 60px;
+    border: none;
+    background-color: turquoise;
+    color: tomato;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 0 10px 10px 0;
+}
+.footer-container .txt{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+.footer-container .txt p{
+    padding: 10px;
+}
+.footer-container .link{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer-container .link a{
+    width: 30px;height: 30px;
+}
+.footer-container .link a img{
+    width: 100%; height: 100%;
+}
+.footer-container .link a + a{
+    margin-left: 20px;
+} 
+.footer-container .byhung{
+    text-align: center;
+    font-size: 15px;
+    padding: 30px;
+}
+.footer-container .byhung span{
+    color: red;
+}
+@media screen and (min-width:768px){
+    .footer-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer-container .item{
+        width: 50%;
+    }
+    .footer-container .txt{
+        width: 35%;
+        padding-top: 50px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+    .footer-container .link{
+        width: 15%;
+        height: 100px;
+        justify-content: center;
+        align-items: center;      
+    }
+    .footer-container .byhung{
+        font-size: 30px;
+        width: 100%;
+        margin: auto;
+    }
+    .footer-container .item input[type="email"]{
+    
+        width: 230px;
+       
+    }
+}

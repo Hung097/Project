@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hung</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/donate_main.css">
+    <link rel="icon" href="/img/img_dog.png" type="image/x-icon">
+    <script src="js/work.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/donate.js"></script>
+</head>
+<body>
+    <div class="loading">
+        <img src="img/Loading.gif" alt="">
+    </div>
+    <input type="checkbox" name="" id="menu-check">
+    <div class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/Home.html"><img src="img/img_title.png" alt="Logo"></a>
+            </div>
+            <label for="menu-check" class="menu-btn">
+                <span>選單</span>
+            </label>
+            <div class="pocket">
+                <a href="/Donate.html"><img src="img/img_pocket.png" alt="Pocket"></a>
+            </div>
+            <nav>
+                <a href="/Home.html">首頁</a>
+                <a href="/Donate.html">捐贈</a>
+                <a href="/Save.html">認養</a>
+                <a href="/Login.html">登入</a>
+            </nav>
+        </div> 
+    </div>
+    
+    <div class="donate_main">
+        <div class="donate_title">捐贈表</div>
+        <div class="container">
+            <div class="item">
+                <div class="img">
+                    <img src="img/dog_can.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="txt">
+                        <h1>狗罐頭</h1>
+                        <p>$59</p>
+                    </div>
+                    <div class="btn">
+                        <div class="reduce" id=can_count_reduce>-</div>
+                        <input id=can_count type="text" value = "0" readonly>
+                        <div class="increase" id=can_count_increase>+</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="img/dog_feeder.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="txt">
+                        <h1>狗飼料</h1>
+                        <p>$500</p>
+                    </div>
+                    <div class="btn">
+                        <div class="reduce" id=feeder_count_reduce>-</div>
+                        <input id=feeder_count type="text" value = "0" readonly>
+                        <div class="increase" id="feeder_count_increase">+</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="img/cat_can.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="txt">
+                        <h1>貓罐頭</h1>
+                        <p>$49</p>
+                    </div>
+                    <div class="btn">
+                        <div class="reduce" id=cat_can_reduce>-</div>
+                        <input id=cat_can_count type="text" value = "0" readonly>
+                        <div class="increase" id="cat_can_increase">+</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="img/cat_feeder.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="txt">
+                        <h1>貓飼料</h1>
+                        <p>$350</p>
+                    </div>
+                    <div class="btn">
+                        <div class="reduce" id=cat_feeder_reduce>-</div>
+                        <input id=cat_feeder_count type="text" value = "0" readonly>
+                        <div class="increase" id="cat_feeder_increase">+</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="finish">
+            <div class="btn" id="finish">付款去</div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="item">
+                <div class="mail"><img src="img/mail.png" alt=""></div>
+                <input type="email" placeholder="請輸入信箱">
+                <input type="submit" value="送出">
+            </div>
+            <div class="txt">
+                <p>手機:0987777777</p>
+                <p>電話:012345678</p>
+            </div>
+            <div class="link">
+                <a href="/Home.html"><img src="img/facebook.png" alt=""></a>
+                <a href="/Home.html"><img src="img/ig.png" alt=""></a>
+                <a href="/Home.html"><img src="img/line.png" alt=""></a>
+                <a href="/Home.html"><img src="img/mail.png" alt=""></a>
+                
+            </div>
+            <div class="byhung">以上圖片無商業用途 練習用<br><span>&copy; copyright by Hung</span></div>
+        </div>
+    </footer>
+    <div id="wrap" class="wrap">
+        <div id="wrap_list" class="list"></div>
+    </div>
+</body>
+</html>
