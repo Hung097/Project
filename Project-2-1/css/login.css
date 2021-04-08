@@ -28,36 +28,36 @@
     backdrop-filter: blur(5px);
     position: relative;
 }
-.login form h3{
+form h3{
     font-size: 30px;font-weight: bold;
     margin-bottom: 20px; padding-bottom: 10px;
     color: whitesmoke;
     border-bottom:1px solid whitesmoke;
 }
 
-.login form .group{
+form .group{
     margin-bottom: 10px;
 }
-.login form .group label{
+.group label{
     line-height: 2em;
     color: whitesmoke;
     font-size: 18px;
 }
-.login form .group input{
+.group input{
     width: 100%;
     line-height: 2.5;
     border-radius: 10px;
     border: none;
 }
-.login form .group input:focus,
-.login form .group-btn input:focus{
+.group input:focus,
+.group-btn input:focus{
     outline: none;
 }
 
-.login form .group-btn{
+.group-btn{
     margin-top: 10px;
 }
-.login form .group-btn input{
+.group-btn input{
     width: 100px; height: 35px;
     border: none;
     background-color: rgb(92, 4, 92);
@@ -67,20 +67,20 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     transition: .3s;
 }
-.login form .group-btn input + input{
+.group-btn input + input{
     margin-left: 10px;
 }
-.login form .group-btn input:hover{
+.group-btn input:hover{
     transform: scale(.9);
     opacity: 0.8;
 }
 
-.login form .group-help{
+.group-help{
     position: absolute;
     right: 20px;
     bottom: 2px;
 }
-.login form .group-help a{
+.group-help a{
     text-decoration: none;
     
 }

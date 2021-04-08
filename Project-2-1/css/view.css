@@ -3,7 +3,7 @@
     margin: 0;
     list-style: none;
 }
-.view{
+.view_main{
     width: 100%; height: 300px;
     margin: 100px auto;
     overflow: hidden;
@@ -12,7 +12,7 @@
     border: 5px solid rgba(222, 222, 200, 0.7);
     box-sizing: border-box;
 }
-.view .view_scroll{
+.view_main .view_scroll{
     position: relative;
     width: 100%; height: 100%;
 }
@@ -67,7 +67,7 @@
     right: 0;
 }
 @media screen and (min-width:768px){
-    .view{
+    .view_main{
         width: 60%;
         height: 550px;
     }

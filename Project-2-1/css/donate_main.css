@@ -49,37 +49,37 @@
     border: 5px solid rgba(0, 0, 0, .7);
     margin: 50px 0;
 }
-.donate_main .container .item .img{
+.donate_main .container .img{
     width: 100%; height: 200px;
 }
-.donate_main .container .item .img img{
+.donate_main .container img{
     width: 100%; height: 100%;
 }
-.donate_main .container .item .content{
+.donate_main .content{
     width: 100%;
     display: flex;
     align-items: center;
     padding: 10px 0;
 }
-.donate_main .container .item .txt{
+.donate_main .txt{
     width: 40%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.donate_main .container .item .txt h1{
+.donate_main h1{
     font-size: 20px;
     font-weight: 900;
 }
-.donate_main .container .item .txt p{
+.donate_main p{
     font-size: 18px;
 }
-.donate_main .container .item .btn{
+.donate_main .btn{
     width: 60%;
     display: flex;
     justify-content: space-around;
 }
-.donate_main .container .item .btn .reduce{
+.donate_main .reduce{
     width: 25%;
     font-size: 30px;
     font-weight: 900;
@@ -88,16 +88,16 @@
     border-radius: 10px;
     cursor: pointer;
 }
-.donate_main .container .item .btn input{
+.donate_main input{
    width: 40%;
    border-radius: 10px;
    text-align: center;
    font-size: 20px;
 }
-.donate_main .container .item .btn input:focus{
+.donate_main input:focus{
     outline: none;
 }
-.donate_main .container .item .btn .increase{
+.donate_main .increase{
     width: 25%;
     font-size: 30px;
     font-weight: 900;
@@ -111,6 +111,7 @@
     color: black;
     transform: scale(.9);
 }
+
 .wrap{
     display: none;
     position: fixed;
@@ -119,7 +120,7 @@
     background-color: transparent;
     backdrop-filter: blur(5px);
 }
-.wrap .list {
+.wrap .list{
     width: 90%; height: 60%;
     margin:25% auto;
     background-color: wheat;
@@ -131,7 +132,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
 }
-.wrap .list h1{
+.wrap h1{
     width: 100%;
     font-size: 35px;
     font-weight: 900;
@@ -139,9 +140,9 @@
     line-height: 1.9;
     border-bottom: 1px solid black;
 }
-.wrap .list .buy_item{
+.wrap .buy_item{
     font-size: 20px;
-    width: 55%;
+    width: 60%;
     border-bottom:1px solid black;
 }
 .wrap .buy_price{

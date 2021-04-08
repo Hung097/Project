@@ -17,13 +17,13 @@ footer{
     justify-content: center;
     padding-top: 50px;
 }
-.footer-container .item .mail{
+.footer-container .mail{
     width: 60px; height: 60px;
     position:relative;
     border-radius: 10px 0 0 10px;
     background-color: white;
 }
-.footer-container .item .mail::before{
+.footer-container .mail::before{
     content: '訂閱';
     position: absolute;
     width: 50px;
@@ -31,19 +31,19 @@ footer{
     font-size: 20px;
     font-weight: bold;
 }
-.footer-container .item .mail img{
+.footer-container .mail img{
     height: 100%; width: 100%;
 }
-.footer-container .item input:focus{
+.footer-container input:focus{
     outline:none;
 }
-.footer-container .item input[type="email"]{
+.footer-container input[type="email"]{
     border: none;
     font-size: 20px;
     width: 150px;
     height: 60px;
 }
-.footer-container .item input[type="submit"]{
+.footer-container input[type="submit"]{
     width: 60px; height: 60px;
     border: none;
     background-color: turquoise;
@@ -81,7 +81,7 @@ footer{
     font-size: 15px;
     padding: 30px;
 }
-.footer-container .byhung span{
+.byhung span{
     color: red;
 }
 @media screen and (min-width:768px){
@@ -110,8 +110,7 @@ footer{
         margin: auto;
     }
     .footer-container .item input[type="email"]{
-    
         width: 230px;
-       
     }
+    
 }
