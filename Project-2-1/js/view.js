@@ -1,6 +1,6 @@
-{
-    const view = document.querySelector('#view_scroll');
-    const items = [...document.querySelectorAll('#view_container .item')];
+window.addEventListener("load", function() {
+    let view = document.querySelector('#view_scroll');
+    let items = [...document.querySelectorAll('#view_container .item')];
     let index = 0;
     let timer;
 
@@ -41,4 +41,4 @@
 
     view.addEventListener('mouseenter', enterHandler);
     view.addEventListener('mouseleave', leaveHandler);
-}
+})
