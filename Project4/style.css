@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    min-width: 1200px;
+    background-color: wheat;
+    position: relative;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+#app {
+    width: 60%;
+    margin: auto;
+}
+
+#Title {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+#refresh {
+    cursor: pointer;
+}
+
+#Buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#Buttons .button {
+    background-color: rgb(170, 45, 45);
+    margin: 20px 10px;
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 2px 2px 5px black;
+    transition: .5s;
+}
+
+#Buttons .button:hover {
+    transform: scale(0.95);
+    box-shadow: none;
+    opacity: .8;
+}
+
+.tag {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.tag>div:first-child,
+.tag>div:last-child {
+    color: red;
+}
+
+#show {
+    width: 100%;
+    height: 100%;
+    margin: 20px 0px;
+    box-sizing: border-box;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.month {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.week {
+    flex: 1 0%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    position: relative;
+    background-color: whitesmoke;
+    opacity: 0.8;
+}
+
+.week::before {
+    content: attr(data-array);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 0px 0px 0px 10px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.today::after {
+    content: '';
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid red;
+    border-right: 6px solid red;
+    position: absolute;
+    left: 2px;
+    top: 0px;
+    height: 15px;
+}
+
+.today::before {
+    background-color: rgb(170, 45, 45);
+    border-left: 2px solid blue;
+    border-bottom: 2px solid blue;
+    color: white;
+}
+
+.other {
+    background-color: rgb(210, 219, 183);
+    opacity: .35;
+}
+
+.week>span {
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    left: 5px;
+    bottom: 2px;
+}
+
+#date {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#todoList>h1 {
+    text-align: center;
+}
+
+#todoList {
+    width: 18%;
+    height: auto;
+    max-height: 650px;
+    border-radius: 10px;
+    border: 10px solid black;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+    top: 200px;
+    right: 10px;
+    overflow-y: scroll;
+}
+
+#todoList ul {
+    margin: 0px 15px;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+}
+
+#modifyInput {
+    font-size: 17px;
+}
+
+#todoList .delete {
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+    color: gray;
+}
+
+#messageInput {
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid brown;
+    backdrop-filter: blur(20px);
+    font-size: 20px;
+    z-index: 10;
+}
+
+#messageInput input {
+    font-size: 20px;
+}
+
+#add {
+    font-size: 25px;
+    position: absolute;
+    bottom: 0;
+    right: 35px;
+    color: green;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#cancle {
+    font-size: 25px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    color: red;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#add:hover,
+#cancle:hover {
+    transform: scale(.9);
+}

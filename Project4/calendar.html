@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link href="style.css" rel="stylesheet"></link>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+
+        <div id="messageInput" v-if="show">
+            <div id='date'>{{year_temp}}/{{month_temp+1}}/{{date_temp}}</div>
+            <span>{{content}}</span>
+            <input type="text" v-model.trim='message' @keyup.enter='addMessage' @keyup.esc="cancleMessage" v-focus>
+            <span id="add" @click="addMessage"><i class="fa fa-check" aria-hidden="true"></i></span>
+            <span id="cancle" @click="cancleMessage"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
+
+        <h1 id='Title'>
+            <i class="fa fa-calendar" aria-hidden="true"></i> {{ calendar.year }} 年 {{calendar.month + 1}} 月
+            <span id="refresh" @click="refreshHandler">
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+            </span>
+        </h1>
+
+        <div id='Buttons'>
+            <div class='button' @click='yearHandler(-1)'>
+                <i class="fa fa-reply" aria-hidden="true"></i>上一年
+            </div>
+            <div class='button' @click='monthHandler(-1)'>
+                <i class="fa fa-reply" aria-hidden="true"></i>上個月
+            </div>
+            <div class='button' @click='setToday'>
+                <i class="fa fa-gg" aria-hidden="true"></i>本月<i class="fa fa-gg" aria-hidden="true"></i>
+            </div>
+            <div class='button' @click='monthHandler(1)'>
+                下個月<i class="fa fa-share" aria-hidden="true"></i>
+            </div>
+            <div class='button' @click='yearHandler(1)'>
+                下一年<i class="fa fa-share" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="tag">
+            <div>日</div>
+            <div>一</div>
+            <div>二</div>
+            <div>三</div>
+            <div>四</div>
+            <div>五</div>
+            <div>六</div>
+        </div>
+
+        <div id='show'>
+            <div class='month' v-for='i in 6'>
+                <div class='week' v-for='j in 7' :data-array='calendarArray[count(i,j)].date' :class="{
+                    today: findToday(calendarArray[count(i,j)]),
+                    other: compareMonth(calendarArray[count(i,j)])
+                }" @dblclick="addTodoList(calendarArray[count(i,j)])">
+                    <span v-if="calendarArray[count(i,j)].item.length">
+                        <i class="fa fa-list-alt" aria-hidden="true"></i> {{calendarArray[count(i,j)].item.length}}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div id="todoList">
+            <h1>{{todolistTitle}}</h1>
+            <ul v-for="(data,i) in currentMonth">
+                {{data.year}}/{{data.month+1}}/{{data.date}}
+                <li v-for="(item,j) in data.item">
+                    <div>
+                        <input type="checkbox" v-model="item.done">
+                        <span :class="{done:item.done}" @dblclick="openModify(i,j,item)">{{ item.text }}</span>
+                        <span class="delete" @click="deleteTodoList(data,item,j)"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                        <div><input id='modifyInput' type="text" v-if='target === i && target_node === j' v-model.trim="target_text" @keyup.enter="modifyHandler(item)" @keyup.esc="closeHandler" @blur="closeHandler" v-focus>
+                </li>
+            </ul>
+            </div>
+
+            </div>
+            <script src="https://use.fontawesome.com/1325e7e83b.js"></script>
+            <script src="vue.js "></script>
+            <script src="main.js "></script>
+</body>
+
+</html>
