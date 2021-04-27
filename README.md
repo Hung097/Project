@@ -1,7 +1,7 @@
 # Pratice
 
-JQ簡易輪播</br>
-Vue簡易輪播</br>
+JQ簡易輪播https://hung097.github.io/Test/JQ/carouse.html</br>
+Vue簡易輪播https://hung097.github.io/Test/Vue/carouse.html</br>
 
 # Works
 
