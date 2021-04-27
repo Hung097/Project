@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carouse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="wrap">
+
+                <transition-group tag='div' name='slide'>
+                    <img v-for='(src,index) in imgList' v-show='index===active' :src="src" :key="src" alt="">
+                </transition-group>
+
+                <div id='buttons'>
+                    <li v-for='(src,index) in imgList' :class='{active: index===active}' @click="change(index)">
+                        <i class="fa fa-circle" aria-hidden="true"></i>
+                    </li>
+                </div>
+                <div id='prev' @click="change(active-1)"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+                <div id='next' @click="change(active+1)"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://use.fontawesome.com/1325e7e83b.js"></script>
+    <script src="vue.js"></script>
+    <script src='JS.js'></script>
+</body>
+
+</html>
