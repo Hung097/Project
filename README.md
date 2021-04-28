@@ -8,5 +8,5 @@ CSS切版<br>
 稀飯排版 https://hung097.github.io/Test/Project3/Home.html</br><br>
 Vue<br>
 年曆待辦事項 https://hung097.github.io/Test/Project4/calendar</br>
-OOXX小遊戲 https://hung097.github.io/Test/Project6/circleCross.html</br>
-瘋狂樂透機 
+OOXX遊戲 https://hung097.github.io/Test/Project6/circleCross.html</br>
+瘋狂樂透機 https://hung097.github.io/Test/Project7/Lottery.html</br>
