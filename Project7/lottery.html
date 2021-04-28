@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app" v-if='balls.length'>
+        <div class="ball">{{ unpickList[ball].num }}</div>
+        <h1><i class="fa fa-usd" aria-hidden="true"></i>瘋狂樂透<i class="fa fa-usd" aria-hidden="true"></i>{{!start ? '準備中...' : (pickList.length === maxBall) ? '開獎結束' : '開獎中...'}}</h1>
+        <div class='box'>
+            <div v-for="ball in sortList" class="selected" :class="{specilNumber:ball.status===maxBall}">
+                {{ball.num}}
+            </div>
+            <div class="tag">特別號</div>
+        </div>
+        <h1>開獎順序</h1>
+        <div class="show">
+            <div class="ball" v-for="ball in pickList" :class="{redBall:ball.status=== maxBall}">{{ ball.num }}</div>
+        </div>
+        <button id='btn' @click="clickHandler">{{start ?'重新開獎':'開獎'}}</button>
+    </div>
+    <script src="https://use.fontawesome.com/1325e7e83b.js"></script>
+    <script src="vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
