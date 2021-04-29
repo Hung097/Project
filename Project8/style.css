@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#app {
+    width: 100%;
+    min-width: 780px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-image: url('background.jpg');
+    background-size: cover;
+}
+
+.apiTitle {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.btns {
+    width: 270px;
+    height: 530px;
+    background: gray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+    border-radius: 20px;
+    opacity: .8;
+    position: relative;
+}
+
+.btns>.btnTitle {
+    position: absolute;
+    top: 0;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.btns>.btnShow {
+    width: 100%;
+}
+
+.btns>.btn {
+    width: 80px;
+    height: 50px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.content {
+    height: 585px;
+    overflow-y: scroll;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content>.box {
+    width: 300px;
+    background-color: white;
+    padding: 20px 38px;
+    margin: 10px 10px;
+    border-radius: 10px;
+    opacity: .9;
+}
+
+.content .title {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 900;
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    width: 200px;
+    opacity: .9;
+}
+
+.content .rec {
+    width: 60px;
+    height: 60px;
+    background: gray;
+    font-size: 30px;
+    font-weight: 900;
+    border-radius: 10px;
+    opacity: .9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0px;
+}
+
+.content .rec::after {
+    content: '';
+    border-top: 5px solid gray;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    position: absolute;
+}
+
+.content .box li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-size: 25px;
+    margin-top: 10px;
+    border-bottom: 2px solid black;
+}
+
+.content .box .liTitle {
+    width: 20%;
+}
+
+.content .box .line {
+    height: 3px;
+    width: 55%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.content .box .liBack {
+    width: 15%;
+    text-align: right;
+    position: relative;
+}
+
+.content .status {
+    margin-left: 15px;
+}
+
+.content .importDate {
+    margin-top: 20px;
+    text-align: right;
+    color: blue;
+}
+
+.focusBtn {
+    background-color: gold !important;
+    color: black !important;
+    border: 2px solid black;
+}
+
+.small1:after {
+    content: '2';
+    position: absolute;
+    font-size: 20px;
+    bottom: 0;
+    left: 32px;
+}
+
+.small2:after {
+    content: '2';
+    position: absolute;
+    font-size: 20px;
+    bottom: 0;
+    left: 36px;
+}
+
+.small3:after {
+    content: '3';
+    position: absolute;
+    font-size: 20px;
+    bottom: 0;
+    left: 17px;
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.orange {
+    color: orange;
+}
+
+.red {
+    color: red;
+}
+
+.fa-font-awesome {
+    color: red;
+}
+
+.fa-fort-awesome {
+    color: brown;
+}
+
+.ug::after {
+    content: 'μg/m3';
+    position: absolute;
+    font-size: 14px;
+    bottom: 0;
+    color: gray;
+}
+
+.ppm::after {
+    content: 'ppm';
+    position: absolute;
+    font-size: 14px;
+    bottom: 0;
+    color: gray;
+}
+
+.ppb::after {
+    content: 'ppb';
+    position: absolute;
+    font-size: 14px;
+    bottom: 0;
+    color: gray;
+}

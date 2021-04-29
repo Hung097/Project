@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AQI</title>
+</head>
+
+<body>
+    <div id="app" v-if="dataList.length">
+        <div class="apiTitle">
+            <h1>Air Quality Index</h1>
+            <h1>台灣空氣品質指標</h1>
+            <h3>更新時間{{publishTime}}</h3>
+        </div>
+
+        <div class="btns">
+            <div class="btnTitle">請選擇縣市</div>
+            <div class="btnShow">{{county[number]}}共有{{classifyLength}}處監測站</div>
+            <div class="btn" v-for="(i,index) in county" :class="{focusBtn:index === number}" @click="clickHandler(index)">{{i}}</div>
+        </div>
+
+        <div class="content">
+            <h1 class="title"><i class="fa fa-fort-awesome" aria-hidden="true"></i> {{county[number]}}</h1>
+            <div class="box" v-for="element in classifyList[number]">
+                <h2><i class="fa fa-font-awesome" aria-hidden="true"></i> {{element.SiteName}}</h2>
+                <div class="rec" :class="{green:element.Status==='良好',yellow:element.Status==='普通',orange:element.Status==='對敏感族群不健康',red:element.Status==='對所有族群不健康'}">{{element.AQI}}</div>
+                <div class="status">{{element.Status}}</div>
+                <ul>
+                    <li><span class="liTitle">PM2.5</span><span class="line"></span><span class="liBack ug">{{element.PM2_5}}</span></li>
+
+                    <li><span class="liTitle">PM10</span><span class="line"></span><span class="liBack ug">{{element.PM10}}</span></li>
+
+                    <li class="small1"><span class="liTitle">SO</span><span class="line"></span><span class="liBack ppb">{{element.SO2}}</span></li>
+
+                    <li><span class="liTitle">CO</span><span class="line"></span><span class="liBack ppm">{{element.CO}}</span></li>
+
+                    <li class="small3"><span class="liTitle">O</span><span class="line"></span><span class="liBack ppm">{{element.O3}}</span></li>
+
+                    <li class="small2"><span class="liTitle">NO</span><span class="line"></span><span class="liBack ppb">{{element.NO2}}</span></li>
+                </ul>
+                <div class="importDate">資料更新時間{{element.ImportDate.slice(0,16)}}</div>
+            </div>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script src="https://use.fontawesome.com/1325e7e83b.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
