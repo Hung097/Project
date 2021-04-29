@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#app {
+    width: 100%;
+    min-width: 850px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url('background.png');
+}
+
+.container {
+    position: relative;
+    border-radius: 20px;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, .8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    height: 100px;
+    text-align: center;
+}
+
+.container .show {
+    font-size: 25px;
+}
+
+.container .data {
+    font-size: 26px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container .data>input {
+    width: 30%;
+    font-size: 20px;
+    margin: 0px 10px;
+    text-align: center;
+}
+
+.container .bmi {
+    position: absolute;
+    font-size: 30px;
+    bottom: 10px;
+}
+
+.container .btn {
+    border: 1px solid black;
+    margin-top: 30px;
+    background-color: skyblue;
+    line-height: 50px;
+    font-size: 25px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pow {
+    position: relative;
+}
+
+.pow::after {
+    content: '2';
+    position: absolute;
+    font-size: 10px;
+    top: -7px;
+    right: -5px;
+}
+
+.orange {
+    color: orange;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}

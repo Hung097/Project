@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div>
+                <h1>BMI值計算</h1>
+                <div class="show">BMI公式 =
+                    <span v-if="!check(weight)">{{weight}}</span> (kg) / (
+                    <span v-if="!check(height)">{{height}}</span>
+                    <span class='pow'> / 100)</span>
+                    <span class='pow'>(m)</span>
+                </div>
+            </div>
+            <div class="data">
+                身高<input type="text" maxlength="3" placeholder="請輸入數字" v-model.trim="height">cm
+            </div>
+            <div class="data">
+                體重<input type="text" maxlength="3" placeholder="請輸入數字" v-model.trim="weight">kg
+            </div>
+            <div class="btn" @click="clickHandler">Clear</div>
+            <div class="bmi" v-if="bmi != 'Error'">BMI {{bmi}}
+                <span :class="{orange:index===1,green:index===2,red:index===3}">{{status}}</span></div>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
