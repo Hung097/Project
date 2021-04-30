@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HitGopher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>打地鼠</h1>
+        <div class="title">獲得{{ score }}分 時間剩餘{{ second }}秒</div>
+        <div class="container">
+            <div class="box" v-for="(element,index) in status">
+                <div class="gopher" :class="{up:element.display===true,hit:element.hit === true}" @click="clickHandler(index)" @mousedown="mousedownHandler(index)" @mouseup="mouseupHandler(index)" :key="element.id">
+                    <img src="gopher.png" alt="土撥鼠">
+                </div>
+                <div class="ground">
+                    <img src="ground.png" alt="地面">
+                </div>
+            </div>
+        </div>
+        <div class="btn" @click="startHandler">{{start?'Reset':'Start'}}</div>
+    </div>
+    <script src="vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
