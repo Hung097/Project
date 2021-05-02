@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todoList</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="todoList">
+        <choose-component @switch='switchHandler'></choose-component>
+        <input-component @input-text='inputHandler'></input-component>
+        <ul>
+            <show-component v-for="item of filterList" :item='item' :id='item.id' :status='item.status' :content='item.content' :key='item.id' :modify='item.modify' @change='changeHandler' @delete='deleteHandler' @modify='modifyHandler' @finishtext='finishText'>
+            </show-component>
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
