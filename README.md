@@ -1,6 +1,9 @@
 # Pratice
-JQ簡易輪播https://hung097.github.io/Test/JQ/carouse.html</br>
-Vue簡易輪播https://hung097.github.io/Test/Vue/carouse.html</br>
+JQ
+簡易淡入淡出輪播 https://hung097.github.io/Test/JQ/carouse.html</br>
+Vue
+簡易左右滑動輪播 https://hung097.github.io/Test/Vue/carouse.html</br>
+簡易卡片左右滑動 https://hung097.github.io/Test/Project14/card.html</br>
 
 # Works
 切版<br>
