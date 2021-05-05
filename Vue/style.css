@@ -68,25 +68,28 @@ img {
     color: red;
 }
 
-.fade-enter,
-.fade-leave-to {
-    opacity: 0;
+.slide-left-enter {
+    left: -100%;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity .7s;
+.slide-left-leave-to {
+    left: 100%
 }
 
-.slide-enter {
+.slide-left-enter-active,
+.slide-left-leave-active {
+    transition: left .7s;
+}
+
+.slide-right-enter {
     left: 100%;
 }
 
-.slide-leave-to {
+.slide-right-leave-to {
     left: -100%
 }
 
-.slide-enter-active,
-.slide-leave-active {
+.slide-right-enter-active,
+.slide-right-leave-active {
     transition: left .7s;
 }

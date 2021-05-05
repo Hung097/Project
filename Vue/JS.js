@@ -4,12 +4,13 @@
         el: '#app',
         data: {
             active: 0,
+            transitionName: null,
             imgList: [
-                "../img/img_1.jpg",
-                "../img/img_2.jpg",
-                "../img/img_3.jpg",
-                "../img/img_4.jpg",
-                "../img/img_5.jpg"
+                {src:"../img/img_1.jpg",alt:1},
+                {src:"../img/img_2.jpg",alt:2},
+                {src:"../img/img_3.jpg",alt:3},
+                {src:"../img/img_4.jpg",alt:4},
+                {src:"../img/img_5.jpg",alt:5},
             ]
         },
         computed: {
@@ -19,7 +20,24 @@
         },
         methods: {
             change(val) {
-                this.active = (val + this.total) % this.total
+                this.active = val
+            }
+        },
+        watch:{
+            active(newValue,oldValue){
+                //console.log(newValue,oldValue)
+                if(newValue < 0){
+                    this.active = this.total-1 
+                }else if(newValue > this.total-1){
+                    this.active = 0
+                }else{
+                    if(newValue === 0 && oldValue === 5 || newValue === 4 && oldValue === -1){
+                        this.transitionName = newValue>oldValue ? 'slide-left' : 'slide-right'
+                    }
+                    else{
+                        this.transitionName = newValue>oldValue ? 'slide-right' : 'slide-left'
+                    }
+                }
             }
         }
     })

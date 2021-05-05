@@ -14,8 +14,8 @@
         <div class="container">
             <div class="wrap">
 
-                <transition-group tag='div' name='slide'>
-                    <img v-for='(src,index) in imgList' v-show='index===active' :src="src" :key="src" alt="">
+                <transition-group tag='div' :name='transitionName'>
+                    <img v-for='(img,index) in imgList' v-show='index===active' :src="img.src" :key="img.src" :alt="img.alt">
                 </transition-group>
 
                 <div id='buttons'>
