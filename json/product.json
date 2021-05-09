@@ -1,0 +1,85 @@
+{
+    "Product":[{   
+            "id":"1",
+            "group":"重訓系列", 
+            "name": "10KG啞鈴套組+50cm連結桿",
+            "content":"10kg槓鈴組(槓片+槓心)+50CM連接桿 調節多種重量，滿足不同訓練 結合50cm連接桿變成長槓心 防水pvc不生鏽，碰撞無噪音",
+            "originalPrice": "794", 
+            "specialOffer": "666", 
+            "favorite":"false",
+            "src":"/img/product/1.png"
+        },{
+            "id":"2",
+            "group":"重訓系列", 
+            "name": "20KG圓形啞鈴套組+40cm連結桿",
+            "content":"20kg啞鈴槓鈴組(槓片+槓心)+40CM連接桿 調節多種重量，滿足不同訓練 結合40cm連接桿變成長槓心 防水pvc不生鏽，碰撞無噪音",
+            "originalPrice": "984", 
+            "specialOffer": "777", 
+            "favorite":"false",
+            "src":"/img/product/2.png"
+        },{
+            "id":"3",
+            "group":"有氧系列",
+            "name": "負重跳繩",
+            "content":"高轉速450G負重跳繩 負重鐵條增強訓練 內置高速培林軸承 調整繩長適合身高",
+            "originalPrice": "249", 
+            "specialOffer": "199", 
+            "favorite":"false",
+            "src":"/img/product/3.png"
+        },{
+            "id":"4",
+            "group":"健腹系列",
+            "name": "腹肌滾輪",
+            "content": "寬滾輪設計提供絕佳穩定性 齒輪紋路設計有效提升抓地力，使用更安全 可拆卸設計，組裝方便，好收納不佔空間。",
+            "originalPrice": "979", 
+            "specialOffer": "666", 
+            "favorite":"false",
+            "src":"/img/product/4.png"
+        },{
+            "id":"5",
+            "group":"慢跑系列",
+            "name": "運動用開洞式護膝",
+            "content":"排汗透氣佳.彈性好 筒狀式設計服貼且均勻地提升部位的整體穩定度。 透氣舒適&彈性佳。",
+            "originalPrice": "569", 
+            "specialOffer": "399", 
+            "favorite":"false",
+            "src":"/img/product/5.png"
+        },{
+            "id":"6",
+            "group":"握力系列",
+            "name": "可調節握力器",
+            "content":"GRIP(阻力10~30公斤調節) 選擇運動強度(10~30公斤) 依照個人不同的阻力需求 符合人體工學，五指充分施力",
+            "originalPrice": "599", 
+            "specialOffer": "499", 
+            "favorite":"false",
+            "src":"/img/product/6.png"
+        },{
+            "id":"7",
+            "group":"柔軟度系列",
+            "name": "瑜珈墊",
+            "content":"悅步瑜伽墊初學者男女加厚加寬加長防滑運動墊瑜珈舞蹈健身防滑墊 瑜伽墊 健身墊",
+            "originalPrice": "500", 
+            "specialOffer": "400", 
+            "favorite":"false",
+            "src":"/img/product/7.png"
+        },{
+            "id":"8",
+            "group":"重訓系列", 
+            "name": "30KG圓形啞鈴套組+40cm連結桿",
+            "content":"30kg啞鈴槓鈴組(槓片+槓心)+40CM連接桿 調節多種重量，滿足不同訓練 結合40cm連接桿變成長槓心 防水pvc不生鏽，碰撞無噪音",
+            "originalPrice": "1100", 
+            "specialOffer": "899", 
+            "favorite":"false",
+            "src":"/img/product/8.png"
+        },{
+            "id":"9",
+            "group":"重訓系列", 
+            "name": "50KG圓形啞鈴套組+40cm連結桿",
+            "content":"50kg啞鈴槓鈴組(槓片+槓心)+40CM連接桿 調節多種重量，滿足不同訓練 結合40cm連接桿變成長槓心 防水pvc不生鏽，碰撞無噪音",
+            "originalPrice": "1999", 
+            "specialOffer": "1599", 
+            "favorite":"false",
+            "src":"/img/product/9.png"
+        }
+    ]
+}
