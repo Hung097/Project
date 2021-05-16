@@ -7,7 +7,11 @@
             "originalPrice": "794", 
             "specialOffer": "666", 
             "favorite":"false",
-            "src":"/img/product/1.png"
+            "cart":"false",
+            "src":"img/product/1.png",
+            "count": "1",
+            "countLimit": "10",
+            "unit": "組"
         },{
             "id":"2",
             "group":"重訓系列", 
@@ -16,7 +20,11 @@
             "originalPrice": "984", 
             "specialOffer": "777", 
             "favorite":"false",
-            "src":"/img/product/2.png"
+            "cart":"false",
+            "src":"img/product/2.png",
+            "count": "1",
+            "countLimit": "15",
+            "unit": "組"
         },{
             "id":"3",
             "group":"有氧系列",
@@ -25,7 +33,11 @@
             "originalPrice": "249", 
             "specialOffer": "199", 
             "favorite":"false",
-            "src":"/img/product/3.png"
+            "cart":"false",
+            "src":"img/product/3.png",
+            "count": "1",
+            "countLimit": "6",
+            "unit": "個"
         },{
             "id":"4",
             "group":"健腹系列",
@@ -34,7 +46,11 @@
             "originalPrice": "979", 
             "specialOffer": "666", 
             "favorite":"false",
-            "src":"/img/product/4.png"
+            "cart":"false",
+            "src":"img/product/4.png",
+            "count": "1",
+            "countLimit": "14",
+            "unit": "個"
         },{
             "id":"5",
             "group":"慢跑系列",
@@ -43,7 +59,11 @@
             "originalPrice": "569", 
             "specialOffer": "399", 
             "favorite":"false",
-            "src":"/img/product/5.png"
+            "cart":"false",
+            "src":"img/product/5.png",
+            "count": "1",
+            "countLimit": "9",
+            "unit": "套"
         },{
             "id":"6",
             "group":"握力系列",
@@ -52,7 +72,11 @@
             "originalPrice": "599", 
             "specialOffer": "499", 
             "favorite":"false",
-            "src":"/img/product/6.png"
+            "cart":"false",
+            "src":"img/product/6.png",
+            "count": "1",
+            "countLimit": "13",
+            "unit": "個"
         },{
             "id":"7",
             "group":"柔軟度系列",
@@ -61,7 +85,11 @@
             "originalPrice": "500", 
             "specialOffer": "400", 
             "favorite":"false",
-            "src":"/img/product/7.png"
+            "cart":"false",
+            "src":"img/product/7.png",
+            "count": "1",
+            "countLimit": "20",
+            "unit": "個"
         },{
             "id":"8",
             "group":"重訓系列", 
@@ -70,16 +98,236 @@
             "originalPrice": "1100", 
             "specialOffer": "899", 
             "favorite":"false",
-            "src":"/img/product/8.png"
+            "cart":"false",
+            "src":"img/product/8.png",
+            "count": "1",
+            "countLimit": "11",
+            "unit": "組"
         },{
             "id":"9",
             "group":"重訓系列", 
-            "name": "50KG圓形啞鈴套組+40cm連結桿",
-            "content":"50kg啞鈴槓鈴組(槓片+槓心)+40CM連接桿 調節多種重量，滿足不同訓練 結合40cm連接桿變成長槓心 防水pvc不生鏽，碰撞無噪音",
+            "name": "40KG圓形啞鈴套組+40cm連結桿",
+            "content":"40kg啞鈴槓鈴組(槓片+槓心)+40CM連接桿 調節多種重量，滿足不同訓練 結合40cm連接桿變成長槓心 防水pvc不生鏽，碰撞無噪音",
             "originalPrice": "1999", 
             "specialOffer": "1599", 
             "favorite":"false",
-            "src":"/img/product/9.png"
+            "cart":"false",
+            "src":"img/product/9.png",
+            "count": "1",
+            "countLimit": "16",
+            "unit": "組"
+        },{
+            "id":"10",
+            "group":"柔軟度系列",
+            "name": "瑜珈球",
+            "content":"適用於全身性的體能運動 輕巧、可攜特性，適用於各種運動 高彈性球體，可搭配重力式運動",
+            "originalPrice": "498", 
+            "specialOffer": "398", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/10.png",
+            "count": "1",
+            "countLimit": "17",
+            "unit": "個"
+        },{
+            "id":"11",
+            "group":"柔軟度系列",
+            "name": "拉力帶",
+            "content":"多種用處 √ 針對不同部位進行訓練 √ 瑜珈輔助 √ 復健伸展 ● 輕巧",
+            "originalPrice": "299", 
+            "specialOffer": "244", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/11.png",
+            "count": "1",
+            "countLimit": "15",
+            "unit": "條"
+        },{
+            "id":"12",
+            "group":"健腹系列",
+            "name": "健腹機",
+            "content":"背墊傾斜角度配合操作 便利折疊收納節省空間 牧師椅舉重床舉重椅.飛鳥凳臥推椅 仰臥板健腹機健腹器.多功能舉重量訓練機",
+            "originalPrice": "2946", 
+            "specialOffer": "2666", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/12.png",
+            "count": "1",
+            "countLimit": "3",
+            "unit": "組"
+        },{
+            "id":"13",
+            "group":"有氧系列",
+            "name": "健身車",
+            "content":"平穩，順暢的飛輪體驗 ．平穩、順暢的21kg飛輪傳動系統 ．標準合金踏板，並附束帶型腳套 ．體身高張力鋼結構設計",
+            "originalPrice": "36800", 
+            "specialOffer": "29999", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/13.png",
+            "count": "1",
+            "countLimit": "13",
+            "unit": "個"
+        },{
+            "id":"14",
+            "group":"慢跑系列",
+            "name": "運動隨身軟式可折疊水壺",
+            "content":"咬嘴式壺嘴設計 吸管輕拉解鎖後，輕咬吸嘴即可飲水，方便又衛生 瓶身輕巧可摺疊，攜帶方便 170ml摺疊水杯 這裡",
+            "originalPrice": "599", 
+            "specialOffer": "499", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/14.png",
+            "count": "1",
+            "countLimit": "12",
+            "unit": "個"
+        },{
+            "id":"15",
+            "group":"慢跑系列",
+            "name": "運動跑步腰包",
+            "content":"尺寸可選 向陽黃 這裡買go 珊瑚粉 這裡買go 250ml水壺 這裡買go",
+            "originalPrice": "690", 
+            "specialOffer": "599", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/15.png",
+            "count": "1",
+            "countLimit": "10",
+            "unit": "個"
+        },{
+            "id":"16",
+            "group":"握力系列",
+            "name": "腕力球",
+            "content":"LED發光腕力球 體積最小！動能最強 男女老少適用，不受空間限制 強化抓力 耐力 腕力 臂力利器",
+            "originalPrice": "388", 
+            "specialOffer": "277", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/16.png",
+            "count": "1",
+            "countLimit": "16",
+            "unit": "個"
+        },{
+            "id":"17",
+            "group":"重訓系列", 
+            "name": "50KG圓形啞鈴套組+40cm連結桿",
+            "content":"50kg啞鈴槓鈴組(槓片+槓心)+40CM連接桿 調節多種重量，滿足不同訓練 結合40cm連接桿變成長槓心 防水pvc不生鏽，碰撞無噪音",
+            "originalPrice": "2111", 
+            "specialOffer": "1899", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/17.png",
+            "count": "1",
+            "countLimit": "8",
+            "unit": "組"
+        },{
+            "id":"18",
+            "group":"重訓系列",
+            "name": "雙頭拉力繩",
+            "content":"肱三頭肌下壓訓練繩 鍛鍊手腕力(抓 握 拉 提) 結合手臂內外側+核心肌群 適用各種重量訓練機台",
+            "originalPrice": "535", 
+            "specialOffer": "499", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/18.png",
+            "count": "1",
+            "countLimit": "29",
+            "unit": "個"
+        },{
+            "id":"19",
+            "group":"重訓系列",
+            "name": "6kg壺鈴",
+            "content":"壺鈴-6kg 一舉數得的多肌群訓練 適合大多族群不分男女 外層耐用pp包覆不生鏽",
+            "originalPrice": "499", 
+            "specialOffer": "399", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/19.png",
+            "count": "1",
+            "countLimit": "15",
+            "unit": "個"
+        },{
+            "id":"20",
+            "group":"重訓系列",
+            "name": "8kg壺鈴",
+            "content":"壺鈴-8kg 一舉數得的多肌群訓練 適合大多族群不分男女 外層耐用pp包覆不生鏽",
+            "originalPrice": "610", 
+            "specialOffer": "511", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/20.png",
+            "count": "1",
+            "countLimit": "18",
+            "unit": "個"
+        },{
+            "id":"21",
+            "group":"重訓系列",
+            "name": "10kg壺鈴",
+            "content":"壺鈴-10kg 一舉數得的多肌群訓練 適合大多族群不分男女 外層耐用pp包覆不生鏽",
+            "originalPrice": "747", 
+            "specialOffer": "666", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/21.png",
+            "count": "1",
+            "countLimit": "20",
+            "unit": "個"
+        },{
+            "id":"22",
+            "group":"重訓系列",
+            "name": "12kg壺鈴",
+            "content":"壺鈴-12kg 一舉數得的多肌群訓練 適合大多族群不分男女 外層耐用pp包覆不生鏽",
+            "originalPrice": "872", 
+            "specialOffer": "777", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/22.png",
+            "count": "1",
+            "countLimit": "12",
+            "unit": "個"
+        },{
+            "id":"23",
+            "group":"慢跑系列",
+            "name": "觸控智能運動手錶",
+            "content":"手錶支援中文介面、手機app藍牙無線資料同步 運動紀錄自動計算每日步數、公里數及卡路里 支援心率、血氧、血壓、睡眠監測",
+            "originalPrice": "699", 
+            "specialOffer": "599", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/23.png",
+            "count": "1",
+            "countLimit": "11",
+            "unit": "個"
+        },{
+            "id":"24",
+            "group":"慢跑系列",
+            "name": "防風跑步手套",
+            "content":"dri-fit科技布料 外層抗風防寒 慢跑輕量款長指手套 可觸控式手機手套指頭_不需要拆手套就可以直接滑手機",
+            "originalPrice": "1000", 
+            "specialOffer": "799", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/24.png",
+            "count": "1",
+            "countLimit": "7",
+            "unit": "個"
+        },{
+            "id":"25",
+            "group":"健腹系列",
+            "name": "健腹貼片",
+            "content":"三主機 含手臂全套組 智能 健腹 運動訓練 肌健腹貼片 健身、運動、肌能 局部塑型，塑造人魚線 強化腹肌，強化臂肌",
+            "originalPrice": "499", 
+            "specialOffer": "399", 
+            "favorite":"false",
+            "cart":"false",
+            "src":"img/product/25.png",
+            "count": "1",
+            "countLimit": "19",
+            "unit": "個"
         }
-    ]
+    ],
+    "discountShow": {
+        "status": "false",
+        "number": "0"
+    }
 }
