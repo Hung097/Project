@@ -18,7 +18,7 @@
         template: `
             <div id="view">
                 <div class="viewTitle">
-                    <img src="/img/view.jpg" class="w-100 h-100" alt="">
+                    <img src="img/view.jpg" class="w-100 h-100" alt="">
                     <div class="info d-flex flex-column align-items-center justify-content-around p-2">{{content}}
                         <router-link  class="btn btn-dark" :to="info.viewTitle.path">
                             {{info.viewTitle.btnText}} <i class="fa fa-angle-double-right" aria-hidden="true"></i>
@@ -190,14 +190,14 @@
                     btnText:'查看更多',
                     topicTitle:'熱門運動',
                     topicList:[
-                        {id:1, src:'/img/topic-1.png', title:'重訓系列', content:'如果你堅持了自己遠大的夢想、全世界都會為你讓路，沒人會阻擋你。', path:'/product'},
-                        {id:2, src:'/img/topic-2.png', title:'有氧系列', content:'提高耐力、增強心肺功能為目的，來增加熱量消耗，以達到減脂目的。', path:'/product'},
-                        {id:3, src:'/img/topic-3.png', title:'健腹系列', content:'為了達成完美曲線這個目的,那麼第一步當然就是要鍛鍊核心肌群!', path:'/product'}
+                        {id:1, src:'img/topic-1.png', title:'重訓系列', content:'如果你堅持了自己遠大的夢想、全世界都會為你讓路，沒人會阻擋你。', path:'/product'},
+                        {id:2, src:'img/topic-2.png', title:'有氧系列', content:'提高耐力、增強心肺功能為目的，來增加熱量消耗，以達到減脂目的。', path:'/product'},
+                        {id:3, src:'img/topic-3.png', title:'健腹系列', content:'為了達成完美曲線這個目的,那麼第一步當然就是要鍛鍊核心肌群!', path:'/product'}
                     ],
                     runningList:[
-                        {id:1, src:'/img/running-1.jpg'},
-                        {id:2, src:'/img/running-2.png'},
-                        {id:3, src:'/img/running-3.png'}
+                        {id:1, src:'img/running-1.jpg'},
+                        {id:2, src:'img/running-2.png'},
+                        {id:3, src:'img/running-3.png'}
                     ],
                     running:{
                         title:'慢跑系列',
@@ -853,7 +853,7 @@
             async getJsonData(){
                 await axios({
                     method: 'get',
-                    url: '/product.json'
+                    url: 'https://hung097.github.io/Test/json/product.json'
                 }).then(res => {
                     if(window.localStorage.getItem('Product') === null){
                         const originalData = res["data"]["Product"]
@@ -1232,9 +1232,9 @@
                     {id:3, path:'/discount', content:'專屬優惠'}
                 ],
                 linkList:[
-                    {id:1, src:'/img/facebook.png', path:'/'},
-                    {id:2, src:'/img/line.png', path:'/'},
-                    {id:3, src:'/img/ig.png', path:'/'}
+                    {id:1, src:'img/facebook.png', path:'/'},
+                    {id:2, src:'img/line.png', path:'/'},
+                    {id:3, src:'img/ig.png', path:'/'}
                 ],
                 scrollBtnShow: true,
                 loadingStatus: false

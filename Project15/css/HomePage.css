@@ -99,7 +99,7 @@
 #grip .img {
   width: 350px;
   height: 350px;
-  background-image: url('/img/grip.png');
+  background-image: url('../img/grip.png');
   background-size: cover;
   position: relative;
   z-index: 0;
@@ -131,7 +131,7 @@
 #grip .pic {
   width: 70%;
   height: 70%;
-  background-image: url('/img/grip.png');
+  background-image: url('../img/grip.png');
   background-size: cover;
   position: absolute;
   top: 50%;
@@ -145,7 +145,7 @@
 #soft .img {
   width: 350px;
   height: 350px;
-  background-image: url('/img/soft.png');
+  background-image: url('../img/soft.png');
   background-size: cover;
   position: relative;
   box-shadow: -2px 2px 5px black;
@@ -177,7 +177,7 @@
 #soft .pic {
   width: 70%;
   height: 70%;
-  background-image: url('/img/soft.png');
+  background-image: url('../img/soft.png');
   background-size: cover;
   position: absolute;
   top: 50%;
