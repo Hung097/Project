@@ -1,0 +1,238 @@
+#view {
+  width: 100%;
+}
+#view .viewTitle {
+  position: relative;
+}
+#view .viewTitle::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  background-color: transparent;
+  bottom: 0;
+  left: 0;
+  border-left: 180px solid black;
+  border-right: 180px solid black;
+  border-top: 50px solid transparent;
+}
+#view .info {
+  width: 270px;
+  height: 230px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 0 50px gold, 3px 3px 6px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 700;
+}
+#view .title {
+  text-align: center;
+  position: relative;
+}
+#view .title::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 150px;
+  bottom: 0;
+  background-color: tomato;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#view .card {
+  box-shadow: 0px 5px 10px black;
+  transition: 0.5s all;
+  margin-top: 5px;
+}
+#view .card:hover {
+  box-shadow: 0px 10px 10px black;
+  transform: translateY(-3%);
+}
+#view .card .pic {
+  height: 50%;
+}
+#view .card-body {
+  position: relative;
+  height: 50%;
+  border: 1px solid gold;
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px gold;
+  text-align: center;
+}
+#view .running {
+  position: relative;
+}
+#view .running .mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 370px;
+  height: 250px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px gold, 3px 3px 5px black;
+}
+#view .btn-dark {
+  box-shadow: inset 0 0 10px white, 0px 5px 5px black;
+  transition: 0.5s all;
+}
+#view .btn-dark:hover {
+  box-shadow: inset 0 0 25px white, 0px 0px 5px black;
+  transform: scale(0.95);
+}
+#view .fa-angle-double-down {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 5;
+  animation: jump 0.5s infinite;
+}
+#grip .img {
+  width: 350px;
+  height: 350px;
+  background-image: url('/img/grip.png');
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  box-shadow: 2px 2px 5px black;
+}
+#grip .img::before {
+  content: '握力系列';
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+  font-size: 40px;
+  font-weight: 900;
+}
+#grip .img::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border: 2px solid black;
+}
+#grip .img:hover > .pic {
+  transform: translate(-30%, -50%);
+}
+#grip .pic {
+  width: 70%;
+  height: 70%;
+  background-image: url('/img/grip.png');
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+  z-index: 3;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0px 0px 20px black;
+}
+#soft .img {
+  width: 350px;
+  height: 350px;
+  background-image: url('/img/soft.png');
+  background-size: cover;
+  position: relative;
+  box-shadow: -2px 2px 5px black;
+  z-index: 0;
+}
+#soft .img::before {
+  content: '柔軟度系列';
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  top: 20px;
+  right: 40px;
+  z-index: 3;
+  font-size: 40px;
+  font-weight: 900;
+}
+#soft .img::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border: 2px solid black;
+}
+#soft .img:hover > .pic {
+  transform: translate(1%, -50%);
+}
+#soft .pic {
+  width: 70%;
+  height: 70%;
+  background-image: url('/img/soft.png');
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(16%, -50%);
+  z-index: 3;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0px 0px 20px black;
+}
+@media screen and (max-width: 768px) {
+  #grip .pic {
+    transform: translate(-45%, -45%);
+  }
+  #grip .img:hover > .pic {
+    transform: translate(-45%, -80%);
+  }
+  #soft .pic {
+    transform: translate(10%, -45%);
+  }
+  #soft .img:hover > .pic {
+    transform: translate(10%, -80%);
+  }
+}
+@media screen and (min-width: 768px) {
+  #view .info {
+    font-size: 35px;
+    width: 430px;
+    height: 350px;
+  }
+  #view .running .mark {
+    height: 200px;
+    width: 300px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #view .viewTitle {
+    height: 80vh;
+  }
+  #view .info {
+    font-size: 40px;
+    width: 470px;
+    height: 400px;
+  }
+  #view .running .mark {
+    height: 230px;
+    width: 310px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #view .viewTitle {
+    height: 91vh;
+  }
+  #view .running .mark {
+    height: 290px;
+    width: 330px;
+  }
+}
